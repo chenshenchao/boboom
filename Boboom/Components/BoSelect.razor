@@ -1,0 +1,38 @@
+﻿@typeparam T
+@inject BoJsPartLibrary<BoSelect<T>> Js
+
+<div class="bo-select">
+    <input @bind="plain" disabled="@IsDisabled" placeholder="@PlaceHolder"/>
+    <BoPopover>
+        @if (ChildContent is null)
+        {
+            @foreach(var option in Options)
+            {
+                <div>@option.ToString();</div>
+            }
+        }
+        else
+        {
+            @foreach(var option in Options)
+            {
+                ChildContent(option);
+            }
+        }
+    </BoPopover>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment<T>? ChildContent { get; set; }
+
+    [Parameter]
+    public IEnumerable<T> Options { get; set; } = new List<T>();
+
+    [Parameter]
+    public string? PlaceHolder { get; set; }
+
+    [Parameter]
+    public bool? IsDisabled { get; set; } 
+
+    private string? plain;
+}

@@ -1,0 +1,27 @@
+﻿@page "/"
+@inject ILogger<Index> Logger
+@inject BoJsPart<Index> Js
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<BoButton OnClick="OnClickBoButton">按钮</BoButton>
+<BoSelect T="string" Options="options"></BoSelect>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    private List<string> options = new List<string>()
+    {
+        "aaaaa",
+        "bbbbb",
+        "ccccc",
+    };
+
+    private async Task OnClickBoButton(MouseEventArgs e)
+    {
+        Logger.LogInformation("");
+        await Task.CompletedTask;
+    }
+}

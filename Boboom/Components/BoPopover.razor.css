@@ -1,0 +1,8 @@
+﻿.bo-popover {
+    position: fixed;
+    z-index: 10000;
+    padding: 0.5em;
+    border: 1px solid #2222;
+    border-radius: .25em;
+    background: #fff;
+}

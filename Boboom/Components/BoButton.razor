@@ -1,0 +1,21 @@
+﻿@inject BoJsPartLibrary<BoButton> Js
+
+<button class="bo-button" @onclick="OnClick">
+    @ChildContent
+</button>
+
+@code {
+    //[Parameter]
+    //public 
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+}
