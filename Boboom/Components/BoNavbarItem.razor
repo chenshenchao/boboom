@@ -1,0 +1,39 @@
+﻿@inject BoJsPartLibrary<BoNavbarItem> Js
+
+<div class="bo-navbar-item">
+    <div class ="bo-navbar-item-self">
+    @if (Link != null)
+    {
+        <a class="bo-navbar-item-link" href="@Link">
+            <span class="bo-navbar-item-title">@Title</span>
+        </a>
+    }
+    else
+    {
+        <span class="bo-navbar-item-title">@Title</span>
+    }
+    @if (Children != null && Children.Length > 0) {
+        <div class="bo-navbar-item-collapse-button">v</div>
+    }
+    </div>
+    @if (Children != null && Children.Length > 0)
+    {
+        <div class="bo-navbar-item-children">
+            @foreach (var child in Children)
+            {
+                <BoNavbarItem Title="@child.Title" Link="@child.Link" Children="@child.Children"/>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? Link { get; set; }
+
+    [Parameter]
+    public BoNavbar.Item[]? Children { get; set; }
+}

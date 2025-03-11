@@ -1,0 +1,27 @@
+﻿.bo-navbar-item-self {
+    display: flex;
+    flex-direction: row;
+}
+
+.bo-navbar-item-title {
+    color: #fff;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.bo-nabar-item-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bo-navbar-item-collapse-button {
+    color: #fff;
+    text-align: center;
+    padding-right: 1em;
+}
+
+.bo-navbar-item-children {
+    display: flex;
+    margin-left: 1em;
+    flex-direction: column;
+}

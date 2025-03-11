@@ -1,0 +1,18 @@
+﻿@inject BoJsPartLibrary<BoNavbar> Js
+
+<nav class="bo-navbar">
+    @foreach (var item in Items) {
+        <BoNavbarItem Title="@item.Title" Link="@item.Link" Children="@item.Children" />
+    }
+</nav>
+
+@code {
+    public class Item {
+        public string? Title { get; set; }
+        public string? Link { get; set; }
+        public Item[]? Children { get; set; }
+    }
+
+    [Parameter]
+    public Item[] Items { get; set; } = new Item[] { };
+}

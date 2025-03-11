@@ -37,5 +37,9 @@
 		<None Include="../Readme.md" Pack="true" PackagePath="/" />
 		<None Include="../Logo.png" Pack="true" PackagePath="/" />
 	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="Layouts\" />
+	</ItemGroup>
 
 </Project>

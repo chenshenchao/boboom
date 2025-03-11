@@ -1,0 +1,18 @@
+﻿@page "/demo/js/import"
+@inject ILogger<Index> Logger
+@inject BoJsService Jss
+
+<PageTitle>Boboom.Js Demo</PageTitle>
+
+<SurveyPrompt Title="Boboom.Js 示例" />
+
+<button @onclick="OnClickWebSingleButton">单 WebJS 文件</button>
+
+@code {
+    private async Task OnClickWebSingleButton(MouseEventArgs e)
+    {
+        Logger.LogInformation("单 WebJs 文件");
+        await using BoJsModule Jsm = Jss.Import("/js/websingle.js");
+        await Jsm.InvokeVoidAsync("sayHello");
+    }
+}
