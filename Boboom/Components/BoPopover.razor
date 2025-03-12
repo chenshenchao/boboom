@@ -1,4 +1,4 @@
-﻿@using Boboom.Math;
+﻿@inject BoDomService Dom
 @inject BoJsPartLibrary<BoPopover> Js
 @inject ILogger<BoPopover> Logger
 @implements IAsyncDisposable
@@ -18,9 +18,9 @@
     {
         await base.OnAfterRenderAsync(firstRender);
         parentElement = await Js.InvokeAsync<IJSObjectReference>("attachPopover", selfElement, selfElement.Id);
-        var p = await Js.InvokeAsync<BoPosition>("getPosition", parentElement);
-        var s = await Js.InvokeAsync<BoSize>("getSize", parentElement);
-        await Js.InvokeVoidAsync("setPosition", selfElement, p.X, p.Y + s.Height);
+        var p = await Dom.GetPosition(parentElement);
+        var s = await Dom.GetSize(parentElement);
+        await Dom.SetPosition(selfElement, p.X,p.Y + s.Height);
         Logger.LogInformation("{0} {1}", p.X, p.Y + s.Height);
     }
 

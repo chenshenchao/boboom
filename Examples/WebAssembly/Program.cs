@@ -1,3 +1,4 @@
+using Boboom;
 using Boboom.Js;
 using Example.WebAssembly;
 using Microsoft.AspNetCore.Components.Web;
@@ -9,7 +10,8 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services
     .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) })
-    .AddBoboomJsService()
+    .AddBoboomService()
+    //.AddBoboomJsService()
     .AddBoboomJsStorageService();
 
 await builder.Build().RunAsync();

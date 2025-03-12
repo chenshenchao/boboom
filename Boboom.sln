@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.WebAssembly", "Exam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boboom.Math", "Boboom.Math\Boboom.Math.csproj", "{8810B57A-1255-9732-9C10-F6114A509616}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boboom.Dom", "Boboom.Dom\Boboom.Dom.csproj", "{3265E3C8-4634-A7A2-E007-D4DFEF9C01D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8810B57A-1255-9732-9C10-F6114A509616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8810B57A-1255-9732-9C10-F6114A509616}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8810B57A-1255-9732-9C10-F6114A509616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3265E3C8-4634-A7A2-E007-D4DFEF9C01D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3265E3C8-4634-A7A2-E007-D4DFEF9C01D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3265E3C8-4634-A7A2-E007-D4DFEF9C01D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3265E3C8-4634-A7A2-E007-D4DFEF9C01D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
