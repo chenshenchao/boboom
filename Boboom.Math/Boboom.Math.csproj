@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <PackageId>Boboom.Math</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>chenshenchao</Authors>
+    <PackageLicenseFile>License</PackageLicenseFile>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>Targets/Binaries/Debug</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>Targets/Binaries/Release</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Targets\**" />
+    <EmbeddedResource Remove="Targets\**" />
+    <Content Remove="Targets\**" />
+    <None Remove="Targets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../License" Pack="true" PackagePath="/" />
+  </ItemGroup>
+  
+</Project>

@@ -41,5 +41,9 @@
 	<ItemGroup>
 	  <Folder Include="Layouts\" />
 	</ItemGroup>
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\Boboom.Math\Boboom.Math.csproj" />
+	</ItemGroup>
 
 </Project>
