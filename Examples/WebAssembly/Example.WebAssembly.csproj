@@ -26,7 +26,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Boboom\Boboom.csproj" />
+	  <ProjectReference Include="..\..\Boboom\Boboom.csproj" />
 	</ItemGroup>
 
 </Project>

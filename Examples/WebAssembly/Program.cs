@@ -1,5 +1,5 @@
 using Boboom.Js;
-using Boboom.Demo;
+using Example.WebAssembly;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

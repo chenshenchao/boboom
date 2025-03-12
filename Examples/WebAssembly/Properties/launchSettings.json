@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Boboom.Demo": {
+    "Example.WebAssembly": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
